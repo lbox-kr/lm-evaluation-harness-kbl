@@ -1,3 +1,30 @@
+# KBL
+- This is a custom branch of `lm-eval-harness` for Korean Benchmark of Legal Language Understanding (KBL).
+- The repository has been forked from the [main branch at 2024.10.7](https://github.com/EleutherAI/lm-evaluation-harness/tree/5e0bc289dfcfe92cd3cd93836c0c863a99f4d566).
+- The purpose of this repository is for the stable evaluation of `KBL`.
+- The evaluation using original `lm-eval-harenss` library will be supported soon.
+
+## Install
+```
+# 1.
+pip install -e ."[api]"
+```
+## Evaluation
+```
+export OPENAI_API_KEY=$(cat [Your-path-to-openai-api-key])
+
+lm_eval \
+    --model "openai-chat-completions" \
+    --model_args "model=gpt-4o-mini-2024-07-18,temperature=0" \
+    --tasks "kbl" \
+    --limit 2 \ #
+    --gen_kwargs "" \
+    --output_path "out-eval/kbl" \
+    --apply_chat_template \
+    --log_samples 
+```
+- ! Please increase the "limit" for full evaluation after testing.
+
 # Language Model Evaluation Harness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)
