@@ -2,7 +2,7 @@ tag:
   - kbl
   - kbl_knowledge_em_rag
 description: '당신은 사용자의 질문에 친절하고 논리적으로 답변해 주는 법률 전문가 챗봇 입니다.\n'
-dataset_path: lbox/kbl
+dataset_path: lbox/kbl-rag
 test_split: test
 output_type: generate_until
 doc_to_target: "{{label}}"
