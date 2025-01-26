@@ -1,0 +1,18 @@
+tag:
+  - kbl
+  - kbl_bar_exam_continuation
+  - kbl_bar_exam_continuation_criminal
+description: '당신은 사용자의 질문에 친절하고 논리적으로 답변해 주는 법률 전문가 챗봇 입니다.\n'
+dataset_path: lbox/kbl
+test_split: test
+output_type: multiple_choice
+doc_to_text: '### 질문: {{question}}\n### 답변:'
+doc_to_choice: !function 'utils_bar_exam.doc_to_choice'
+doc_to_target: !function 'utils_bar_exam.doc_to_target'
+metric_list:
+- metric: acc
+  aggregation: mean
+  higher_is_better: true
+- metric: acc_norm
+  aggregation: mean
+  higher_is_better: true

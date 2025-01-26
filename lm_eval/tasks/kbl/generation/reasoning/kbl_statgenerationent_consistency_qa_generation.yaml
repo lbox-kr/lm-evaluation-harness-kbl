@@ -1,0 +1,5 @@
+task: kbl_statgenerationent_consistency_qa_generation
+dataset_name: kbl_reasoning_statgenerationent_consistency_qa
+doc_to_text: "### 질문: {{question}}\n진술1: {{statgenerationent1}}\n진술2: {{statgenerationent2}}\nA: {{A}}, B: {{B}}\n중 하나를 선택하여 '답변: A'과 같이 단답식으로 답해주세요."
+doc_to_target: label
+include: _kbl_reasoning_yaml
