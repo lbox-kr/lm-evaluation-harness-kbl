@@ -1,0 +1,7 @@
+task: kbl_case_relevance_qa_p_continuation
+dataset_name: kbl_reasoning_case_relevance_qa_p
+doc_to_text: "### 질문: {{question}}\n1. 판결문1\n\n1.1 상고인\n{{query_case_appellant}}\n2.2 사실관계\n{{query_case_fact}}\n2.3\n당사자들의 주장\n{{query_case_claim}}\n2.4판사의 의견\n{{query_case_judicial_opinion}}\n\n2. 판결문2\n\n2.1 상고인\n{{retrieved_case_appellant}}\n2.2 사실관계\n{{retrieved_case_fact}}\n2.3\n당사자들의 주장\n{{retrieved_case_claim}}\n2.4판사의 의견\n{{retrieved_case_judicial_opinion}}\n\nA: {{A}}, B: {{B}}\n중 하나를 선택하여 '답변: A'과 같이 단답식으로 답해주세요. ### 답변:"
+doc_to_choice: !function 'utils_reasoning_qa.doc_to_choice_label'
+doc_to_target: !function 'utils_reasoning_qa.doc_to_target'
+include: _kbl_reasoning_yaml
+

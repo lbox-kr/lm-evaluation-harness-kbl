@@ -1,0 +1,4 @@
+task: kbl_bar_exam_continuation_responsibility_2014
+dataset_name: bar_exam_responsibility_2014
+include: _base_continuation_yaml
+
